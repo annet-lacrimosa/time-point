@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+	<title>Project Name</title>
+	<link media="all" rel="stylesheet" href="css/all.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script type="text/javascript">
+		window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js" defer><\/script>')
+	</script>
+	<script type="text/javascript" src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="w1">
+			@@include("templates/header.html", {"activepage": "homepage"})
+			<div id="main">
+				<div id="content">
+					<ul style="font-size:20px;">
+						<li><i class="icon icon-ico-fd_tool_message"></i></li>
+						<li><i class="icon icon-ico-fd_tool_photo"></i></li>
+						<li><i class="icon icon-ico-fd_tool_keyboard"></i></li>
+						<li><i class="icon icon-ico-fd_tool_gauge"></i></li>
+						<li><i class="icon icon-ico-fd_tool_clone"></i></li>
+						<li><i class="icon icon-ico-fd_tool_choice_multy"></i></li>
+					</ul>
+				</div>
+				<aside id="sidebar">
+					sidebar
+				</aside>
+			</div>
+			@@include("templates/footer.html")
+		</div>
+	</div>
+</body>
+</html>
