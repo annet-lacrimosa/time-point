@@ -34,8 +34,36 @@ $media-expressions: (
 #wrapper{
 	position:relative;
 	overflow:hidden;
+	padding: 72px 0 0;
+}
+.center-holder{
+	max-width: 1170px;
+	margin: 0 auto;
+	@include media("<=widescreen"){
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+/*------------- Header styles ----------*/
+.header{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 72px;
+	border-bottom: 1px solid $gray;
 }
 
+
+
+.visual-section{
+	background-size: cover;
+	background-position: center;
+	color: $white;
+	.visual-text{
+		max-width: 570px;
+	}
+}
 
 
 

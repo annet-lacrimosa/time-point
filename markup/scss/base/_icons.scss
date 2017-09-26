@@ -19,6 +19,14 @@
 	text-transform: none;
 }
 
-.icon-star:before{
+.icon-calendar:before{
 	content:"\E001";
+}
+
+.icon-people:before{
+	content:"\E002";
+}
+
+.icon-star:before{
+	content:"\E003";
 }

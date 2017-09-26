@@ -8,7 +8,7 @@ h5, .h5,
 h6, .h6,
 .h {
   font-family: $headings-font-family;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0 0 0.5em;
   color: $headings-color;
 }
@@ -47,4 +47,7 @@ a {
   &:hover{
     color: $base-link-hover-color;
   }
+}
+strong{
+  font-weight: 800;
 }
