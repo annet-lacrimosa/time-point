@@ -8,13 +8,14 @@ h5, .h5,
 h6, .h6,
 .h {
   font-family: $headings-font-family;
-  font-weight: normal;
   margin: 0 0 0.5em;
   color: $headings-color;
+  font-weight: 300;
 }
 
 h1, .h1 {
   font-size: $h1-font-size;
+  line-height: 1.2;
 }
 
 h2, .h2 {

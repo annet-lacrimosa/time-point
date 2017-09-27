@@ -12,6 +12,19 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+// Pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Clearfix layout
+@mixin clearfix($display: block, $clear: both, $content: ''){
+  content: $content;
+  display: $display;
+  clear: $clear;
+}
 // vertical align el inside parent with fixed height/min-height
 // usage 
 // html - .parent>.child

@@ -5,11 +5,15 @@
 $black: #000;
 $white: #fff;
 $gray: #f8f9fb;
+$gray2: #d6dade;
+$gray3: #7c8087;
 $blue: #4a90e2;
 $red: #df3536;
 $yellow: #f9b42d;
 $green: #8ed72b;
 $base-gray: #5d626a;
+$dark-gray: #020202;
+$dark-bg: #1f242a;
 
 $base-font-sans-serif: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -50,7 +54,7 @@ $h5-font-size: 17px !default;
 $h6-font-size: 14px !default;
 
 $headings-font-family: inherit !default;
-$headings-color: inherit !default;
+$headings-color: $black !default;
 
 $animation-speed: 0.2s;
 $animation-effect: ease;
