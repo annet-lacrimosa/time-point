@@ -1,0 +1,13 @@
+#wrapper{
+  position:relative;
+  overflow:hidden;
+  flex: 1 0 auto;
+}
+.center-holder{
+  max-width: 1170px;
+  margin: 0 auto;
+  @include media("<=widescreen"){
+    max-width: none;
+    padding: 0 20px;
+  }
+}

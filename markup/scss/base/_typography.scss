@@ -16,22 +16,37 @@ h6, .h6,
 h1, .h1 {
   font-size: $h1-font-size;
   line-height: 1.2;
+  @include media("<=tablet"){
+    font-size:$h1-font-size * 0.8;
+  }
 }
 
 h2, .h2 {
   font-size: $h2-font-size;
+  @include media("<=tablet"){
+    font-size:$h2-font-size * 0.8;
+  }
 }
 
 h3, .h3 {
   font-size: $h3-font-size;
+  @include media("<=tablet"){
+    font-size:$h3-font-size * 0.9;
+  }
 }
 
 h4, .h4 {
   font-size: $h4-font-size;
+  @include media("<=tablet"){
+    font-size:$h4-font-size * 0.9;
+  }
 }
 
 h5, .h5 {
   font-size: $h5-font-size;
+  @include media("<=tablet"){
+    font-size:$h5-font-size * 0.9;
+  }
 }
 
 h6, .h6 {

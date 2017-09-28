@@ -1,0 +1,391 @@
+/*------------- Header styles ----------*/
+.header{
+  /*position: fixed;*/
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid $gray;
+  background: transparent;
+  z-index: 99;
+  @include media("<=desktop"){
+    padding: 15px 0;
+  }
+  +*{
+    padding-top: 72px;
+  }
+  &.drop-hover{
+    background: rgba(31,36,42,.9);
+    color: $white;
+    a:not(.btn){
+      color: $white;
+    }
+  }
+}
+.header-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  @include media("<=widescreen"){
+    max-width: 200px;
+  }
+}
+.nav-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media("<=desktop"){
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left:0;
+    padding: 10px 0 20px;
+    overflow: hidden;
+    visibility:hidden;
+    opacity:0;
+    transform:scale(1,0);
+    transform-origin:50% 0;
+    transition:all 0.4s ease;
+    z-index: 9;
+    flex-direction: column;
+  }
+  .buttons-holder{
+    @include media("<=widescreen"){
+      padding: 0 0 0 10px;
+    }
+    @include media("<=desktop"){
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      .btn{
+        margin: 0 15px;
+      }
+    }
+  }
+}
+.menu-opener{
+  display: none;
+  @include size(46px, 42px);
+  background: $red;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+  span,
+  &:before,
+  &:after{
+    @include pseudo();
+    @include size(auto, 4px);
+    left:15%;
+    right:15%;
+    top:50%;
+    margin:-2px 0 0;
+    border-radius:2px;
+    background: $white;
+    transition: background 0.3s, top 0.3s 0.3s, transform 0.3s, opacity 0.3s 0.3s;
+  }
+  &:before{
+    top: 28%;
+  }
+  &:after{
+    top: 72%;
+  }
+  @include media("<=desktop"){
+    display: block;
+  }
+  &:hover{
+    background: $white;
+    span,
+    &:before,
+    &:after{
+      background: $red;
+    }
+  }
+}
+.nav-active{
+  .header{
+    background: rgba(31,36,42,.9);
+  }
+  .nav-holder{
+    @include media("<=desktop"){
+      visibility:visible;
+      opacity:1;
+      transform:scale(1,1);
+      background: rgba(31,36,42,.9);
+      max-height: calc(100vh - 72px);
+      overflow-y: auto;
+    }
+
+  }
+  .menu-opener{
+    background: $white;
+    span,
+    &:before,
+    &:after{
+      top:50%;
+      transition: background 0.3s, top 0.3s, transform 0.3s 0.3s, opacity 0.3s;
+      background: $red;
+    }
+    span{
+      opacity: 0;
+    }
+    &:before{
+      top:50%;
+      transform: rotate(45deg);
+    }
+    &:after{
+      top:50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.nav{
+  float: left;
+  text-transform: uppercase;
+  font-size:$base-font-size * 0.82; //14px
+  @include media("<=widescreen"){
+    font-size:$base-font-size * 0.71; //12px
+  }
+  @include media("<=desktop"){
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size:$base-font-size;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @extend %clearfix;
+    @include media("<=desktop"){
+      display: block;
+    }
+  }
+  li{
+    float: left;
+    @include media("<=desktop"){
+      padding: 0;
+      float: none;
+    }
+    &.active{
+      >a{
+        text-shadow: 0 0 1px $white;
+        &:before{
+          opacity: 1;
+        }
+        @include media("<=desktop"){
+          background: $red;
+        }
+      }
+    }
+    >a{
+      padding: 25px 11px 25px 18px;
+      display: block;
+      position: relative;
+      color: $white;
+      @include media("<=desktop"){
+        padding: 5px 15px;
+      }
+      &:hover{
+        text-shadow: 0 0 1px $white;
+        &:before{
+          opacity: 1;
+        }
+      }
+      &:before{
+        @include pseudo();
+        @include size(100%, 3px);
+        background: $red;
+        bottom: -5px;
+        left: 0;
+        opacity:0;
+        @include media("<=desktop"){
+          display: none;
+        }
+      }
+    }
+  }
+  a{
+    color: $white;
+    &.has-drop-down-a{
+      span{
+        display: inline-block;
+        position: relative;
+        &:after{
+          @include pseudo();
+          top: 50%;
+          right: -12px;
+          background: url(../images/sprite.png) no-repeat -15px 0;
+          @include size(8px, 5px);
+          transform: translate(0, -50%);
+        }
+      }
+
+    }
+  }
+  .has-drop-down{
+    @include media("<=desktop"){
+      position: relative;
+    }
+    &.hover{
+      a{
+        &:before{
+          opacity: 1;
+        }
+      }
+      .has-drop-down-a{
+        span{
+          &:after{
+            background-position: 0 0;
+          }
+        }
+
+      }
+    }
+  }
+  .drop-down{
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
+    padding:32px 0;
+    background: rgba(31,36,42,.9);
+    visibility:hidden;
+    opacity:0;
+    transform:scale(1,0);
+    transform-origin:50% 0;
+    transition:all 0.4s ease;
+    color: $white;
+    text-transform: none;
+    a:not(.btn){
+      color: $white;
+      transition: all .3s ease-out;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      color: $white;
+      text-transform: uppercase;
+    }
+    h3{
+      font-size:$h3-font-size * 0.8; //20px
+      font-weight: 600;
+      margin: 0 0 22px;
+    }
+    h6{
+      font-weight: 700;
+      color: $gray2;
+      margin: 0 0 15px;
+    }
+  }
+  .hover{
+    a:after{display:block;}
+    .drop-down{
+      visibility:visible;
+      opacity:1;
+      transform:scale(1,1);
+      @include media("<=desktop"){
+        position: static;
+      }
+    }
+  }
+  .center-holder{
+    overflow: hidden;
+  }
+  .info-box{
+    float: left;
+    border-right: 1px solid $gray2;
+    width: 27.2%;
+    font-size:$base-font-size;
+    line-height: 1.3;
+    padding: 0 28px 16px 0;
+    @include media("<=desktop"){
+      display: none;
+    }
+    p{
+      margin: 0 0 25px;
+    }
+  }
+  .btn{
+    display: inline-block;
+  }
+  .menu-holder{
+    overflow: hidden;
+    padding: 4px 0 0 71px;
+    @include media("<=desktop"){
+      padding: 0;
+    }
+  }
+  .box-menu{
+    float: left;
+    width: 34.3%;
+    padding: 0 15px 0 0;
+    @include media("<=desktop"){
+      float: left;
+      width: 100%;
+      position: relative;
+    }
+    &:last-child{
+      width: 31.3%;
+      @include media("<=desktop"){
+        width: 100%;
+      }
+    }
+  }
+  .drop-menu{
+    display: block;
+    font-size:$base-font-size * 0.88; //15px
+    @extend %listreset;
+    @include media("<=desktop"){
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left:0;
+      visibility:hidden;
+      opacity:0;
+      transform:scale(1,0);
+      transform-origin:50% 0;
+      transition:all 0.4s ease;
+      &.active-drop-menu{
+        visibility:visible;
+        opacity:1;
+        transform:scale(1,1);
+        position: static;
+      }
+    }
+
+    li{
+      padding: 0 0 9px;
+      float: none;
+    }
+    a{
+      color: $white;
+      display: inline-block;position: relative;
+      padding: 0 0 0 16px;
+      text-shadow: none;
+      &:before{
+        @include pseudo();
+        @include size(4px, 4px);
+        border-radius: 50%;
+        top: 8px;
+        left:0;
+        background: $white;
+        transition: all .3s ease-out;
+      }
+      &:hover{
+        color: $red;
+        text-decoration: underline;
+        text-shadow: none;
+        &:before{
+          background: $red;
+        }
+      }
+    }
+  }
+}

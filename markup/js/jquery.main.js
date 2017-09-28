@@ -26,8 +26,14 @@ function initCustomHover() {
         onLeave: function(elem) {
             jQuery('.header').removeClass(hoverClass);
         }
+
     });
 }
+$(function(){
+    jQuery('.header .box-menu h6').click( function(){
+        jQuery(this).parent().find('.drop-menu').toggleClass('active-drop-menu');
+    })
+});
 
 
 // handle dropdowns on mobile devices
@@ -53,6 +59,18 @@ function initDropDownClasses() {
         }
     });
 }
+
+// mobile menu init
+$(function(){
+    var body = jQuery('body');
+    var opener = jQuery('.header .menu-opener');
+    var activeClass = 'nav-active';
+
+    opener.on('click', function(e) {
+        e.preventDefault();
+        body.toggleClass(activeClass);
+    });
+});
 
 /*
  * jQuery Tabs plugin

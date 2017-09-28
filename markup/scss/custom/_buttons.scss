@@ -1,0 +1,58 @@
+// buttons
+.btn{
+  display: inline-block;
+  vertical-align: top;
+  color: $white;
+  background: $red;
+  font-size:$base-font-size * 0.82; //14px;
+  font-weight: 700;
+  border: 1px solid $red;
+  border-radius: 1px;
+  padding: 9px 22px 10px 29px;
+  transition: all .3s ease-out;
+  text-align: center;
+  @include media("<=widescreen"){
+    padding: 6px 10px 7px;
+    font-size:$base-font-size * 0.7; //12px;
+  }
+  &:hover{
+    background: $white;
+    color: $red;
+  }
+  &.transparent{
+    background: transparent;
+    border-color: $white;
+    &:hover{
+      background: $white;
+    }
+  }
+  &.white{
+    background: $white;
+    border-color: $white;
+    color: $red;
+    &:hover{
+      background: $red;
+      border-color: $red;
+      color: $white;
+    }
+  }
+  &.gray-bd{
+    border-color: $gray2;
+    color: $base-gray;
+    &:hover{
+      color: $white;
+      background: $gray2;
+      border-color: $gray2;
+    }
+  }
+  &.large{
+    font-size:$base-font-size * 1.06;  //18px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    @include media("<=tablet"){
+      padding-top: 9px;
+      padding-bottom: 10px;
+      font-size:$base-font-size * 0.9;
+    }
+  }
+}

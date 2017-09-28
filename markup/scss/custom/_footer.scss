@@ -1,0 +1,202 @@
+// Footer
+.footer{
+  border-bottom: 15px solid $red;
+  background: $dark-bg;
+  color: #acb3b0;
+  font-size:$base-font-size * 0.88; //15px;
+  padding: 81px 0 20px;
+  @include media("<=tablet"){
+    padding: 40px 0 20px;
+    font-size:$base-font-size * 0.7; //12px
+  }
+  a{
+    color: $white;
+    &:hover{
+      color: $gray2;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    color: #acb3b0;
+  }
+  h6{
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+  .tel{
+    font-size:$base-font-size * 1.47; //25px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 12px;
+    @include media("<=tablet"){
+      font-size:$base-font-size;
+    }
+  }
+}
+.footer-holder{
+  @extend %clearfix;
+  padding: 0 0 79px;
+  @include media("<=tablet"){
+    padding: 0 0 30px;
+  }
+  .col{
+    float: left;
+    width: 25.6%;
+    padding: 0 15px 0 0;
+    @include media("<=desktop"){
+      width: 50%;
+      padding: 0 15px 40px;
+    }
+    @include media("<=phone"){
+      float: none;
+      width: 100%;
+      padding: 0 0 20px;
+    }
+  }
+}
+.footer-nav-holder{
+  overflow: hidden;
+  @include media("<=desktop"){
+    float: left;
+    width: 100%;
+  }
+  .box{
+    float: left;
+    width:35.3%;
+    padding: 0 15px 0 0;
+    &:last-child{
+      width: 29.4%;
+      padding: 0;
+      @include media("<=phone"){
+        width: 100%;
+      }
+    }
+    @include media("<=phone"){
+      float: none;
+      width: 100%;
+      padding: 0 0 20px;
+    }
+  }
+  h6{
+    margin: 0 0 14px;
+  }
+}
+.logo-footer{
+  padding: 5px 0 37px;
+}
+.sub-nav{
+  @extend %listreset;
+  font-weight: 700;
+  font-size:$base-font-size * 0.82; //14px;
+  text-transform: uppercase;
+  @include media("<=tablet"){
+    font-size:$base-font-size * 0.7; //12px
+  }
+  li{
+    padding: 16px 0 0;
+    &:first-child{
+      padding: 0;
+    }
+    @include media("<=tablet"){
+      padding: 5px 0 0;
+    }
+  }
+}
+.footer-nav{
+  @extend %listreset;
+  li{
+    position: relative;
+    padding: 0 0 9px 16px;
+    &:before{
+      @include pseudo();
+      @include size(4px);
+      border-radius: 50%;
+      background: $gray3;
+      left:0;
+      top:9px;
+    }
+  }
+}
+.footer-frame{
+  border-top: 1px solid $base-gray;
+  overflow: hidden;
+  padding: 18px 0;
+  @include media("<=phone"){
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .by{
+    float: right;
+    color: $white;
+    font-weight: 700;
+    @include media("<=phone"){
+      order: 2;
+    }
+  }
+  .text-block{
+    overflow: hidden;
+    @include media("<=phone"){
+      order: 1;
+    }
+  }
+}
+.copyright{
+  display: inline-block;
+  vertical-align: top;
+  color: $white;
+  font-weight: 700;
+  padding: 0 46px 0 0;
+  @include media("<=phone"){
+    display: block;
+    padding: 0 0 10px;
+    p{
+      margin: 0;
+    }
+  }
+}
+.add-menu{
+  display: inline-block;
+  vertical-align: top;
+  color: #9ba2a0;
+  @extend %listreset;
+  @include media("<=phone"){
+    display: block;
+  }
+  li{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding: 0 15px;
+    @include media("<=phone"){
+      &:first-child{
+        padding: 0 15px 10px 0;
+      }
+    }
+    &:before{
+      @include pseudo();
+      @include size(2px, 16px);
+      background: #9ba2a0;
+      top: 50%;
+      left:0;
+      transform: translate(0,-40%);
+    }
+    &:first-child{
+      &:before{
+        display: none;
+      }
+    }
+  }
+  a{
+    color: #9ba2a0;
+    &:hover{
+      color: $white;
+    }
+  }
+
+}
