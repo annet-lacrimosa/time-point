@@ -376,7 +376,7 @@ th {
 .icon-customers:before {
   content: "\E003"; }
 
-.nav .drop-menu, .stat-list, .tabset, .customers-list, .sub-nav, .footer-nav, .add-menu {
+.nav .drop-menu, .tabset, .stat-list, .customers-list, .solutions-list, .sub-nav, .footer-nav, .add-menu {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -1037,6 +1037,142 @@ label {
       padding: 0 0 8px;
       margin: 0 0 -1px; }
 
+.tabset {
+  display: table;
+  font-size: 20.06px;
+  text-transform: uppercase;
+  color: #7c8087;
+  font-weight: 600;
+  position: relative;
+  width: 100%; }
+  @media (max-width: 992px) {
+    .tabset {
+      font-size: 17px; } }
+  @media (max-width: 768px) {
+    .tabset {
+      font-size: 11.05px; } }
+  .tabset:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: #d6dade;
+    border-radius: 3px; }
+    @media (max-width: 768px) {
+      .tabset:before {
+        width: 100%;
+        height: 5px; } }
+  .tabset li {
+    position: relative;
+    display: table-cell;
+    text-align: center; }
+    .tabset li:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 12px;
+      background: transparent;
+      border-radius: 3px;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: background .3s ease-out; }
+      @media (max-width: 768px) {
+        .tabset li:before {
+          width: 100%;
+          height: 5px; } }
+    .tabset li.active a {
+      color: #020202; }
+    .tabset li.active:before {
+      background: #df3536; }
+  .tabset a {
+    display: block;
+    padding: 67px 10px 57px;
+    outline: 0;
+    color: #7c8087;
+    transition: all .3s ease-out; }
+    @media (max-width: 992px) {
+      .tabset a {
+        padding: 40px 10px; } }
+    @media (max-width: 768px) {
+      .tabset a {
+        padding: 20px 5px; } }
+    .tabset a:hover, .tabset a.active {
+      color: #020202; }
+  .tabset_view-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    font-size: 14.11px;
+    padding: 39px 0 31px; }
+    @media (max-width: 480px) {
+      .tabset_view-2 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .tabset_view-2:before {
+      display: none; }
+    .tabset_view-2 li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 2px 0 3px; }
+      @media (max-width: 480px) {
+        .tabset_view-2 li {
+          display: block;
+          margin: 0 0 3px; } }
+      .tabset_view-2 li:before {
+        display: none; }
+      .tabset_view-2 li.active a {
+        background: #df3536;
+        color: #fff; }
+        .tabset_view-2 li.active a:after {
+          opacity: 1; }
+    .tabset_view-2 a {
+      color: #7c8087;
+      background: #f8f9fb;
+      padding: 12px 32px 13px 37px;
+      position: relative;
+      transition: all .4s ease-out; }
+      .tabset_view-2 a:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 8px solid #df3536;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        opacity: 0;
+        width: 0;
+        height: 0;
+        transition: all .4s ease-out; }
+      .tabset_view-2 a.active, .tabset_view-2 a:hover {
+        background: #df3536;
+        color: #fff; }
+      @media (max-width: 480px) {
+        .tabset_view-2 a {
+          display: block; }
+          .tabset_view-2 a:after {
+            display: none; } }
+
+.more {
+  font-weight: 600; }
+
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -1196,76 +1332,6 @@ label {
       @media (max-width: 768px) {
         .content-block .text-block p {
           margin: 0 0 20px; } }
-
-.tabset {
-  display: table;
-  font-size: 20.06px;
-  text-transform: uppercase;
-  color: #7c8087;
-  font-weight: 600;
-  position: relative;
-  width: 100%; }
-  @media (max-width: 992px) {
-    .tabset {
-      font-size: 17px; } }
-  @media (max-width: 768px) {
-    .tabset {
-      font-size: 11.05px; } }
-  .tabset:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 12px;
-    background: #d6dade;
-    border-radius: 3px; }
-    @media (max-width: 768px) {
-      .tabset:before {
-        width: 100%;
-        height: 5px; } }
-  .tabset li {
-    position: relative;
-    display: table-cell;
-    text-align: center; }
-    .tabset li:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 12px;
-      background: transparent;
-      border-radius: 3px;
-      top: 0;
-      left: 0;
-      right: 0;
-      transition: background .3s ease-out; }
-      @media (max-width: 768px) {
-        .tabset li:before {
-          width: 100%;
-          height: 5px; } }
-    .tabset li.active a {
-      color: #020202; }
-    .tabset li.active:before {
-      background: #df3536; }
-  .tabset a {
-    display: block;
-    padding: 67px 10px 57px;
-    outline: 0;
-    color: #7c8087;
-    transition: all .3s ease-out; }
-    @media (max-width: 992px) {
-      .tabset a {
-        padding: 40px 10px; } }
-    @media (max-width: 768px) {
-      .tabset a {
-        padding: 20px 5px; } }
-    .tabset a:hover, .tabset a.active {
-      color: #020202; }
-
-.more {
-  font-weight: 600; }
 
 .button-block {
   overflow: hidden;
@@ -1475,6 +1541,99 @@ label {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; } }
+
+.solution-tabs {
+  padding: 26px 0 10px; }
+
+.solutions-list {
+  margin: 0 -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: hidden; }
+  .solutions-list li {
+    width: 33.3%;
+    padding: 0 15px 30px; }
+    @media (max-width: 992px) {
+      .solutions-list li {
+        width: 50%; } }
+    @media (max-width: 768px) {
+      .solutions-list li {
+        width: 100%; } }
+  .solutions-list .solution-block {
+    border: 1px solid #d6dade;
+    padding: 26px 35px;
+    font-size: 14.96px;
+    line-height: 1.3;
+    height: 100%; }
+    @media (max-width: 768px) {
+      .solutions-list .solution-block {
+        font-size: 12.07px;
+        padding: 10px 15px; } }
+  .solutions-list .title-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 13px; }
+    .solutions-list .title-box .icon-box {
+      width: 52px;
+      height: 52px;
+      position: relative;
+      margin: 0 15px 0 0; }
+      .solutions-list .title-box .icon-box img {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; }
+  .solutions-list h3 {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #5d626a;
+    margin: 0 0 6px; }
+  .solutions-list p {
+    margin: 0 0 21px; }
+  .solutions-list .info-block {
+    background: #f8f9fb;
+    text-align: center;
+    height: 100%;
+    font-size: 14.96px;
+    line-height: 1.3;
+    padding: 28px 32px 30px;
+    min-height: 218px; }
+    @media (max-width: 768px) {
+      .solutions-list .info-block {
+        min-height: 1px;
+        font-size: 12.07px;
+        padding: 10px 15px; } }
+    .solutions-list .info-block h3 {
+      margin: 0 0 24px; }
+    .solutions-list .info-block p {
+      margin: 0; }
+
+.cloud {
+  padding: 57px 0 40px; }
+  @media (max-width: 768px) {
+    .cloud {
+      padding: 30px 0; } }
+  .cloud .title-with-border {
+    margin: 0 0 49px; }
 
 .footer {
   border-bottom: 15px solid #df3536;
