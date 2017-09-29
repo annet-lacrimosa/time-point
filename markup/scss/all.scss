@@ -23,6 +23,7 @@ $media-expressions: (
 @import 'vendors/normalize';
 
 @import 'base/icons';
+//@import 'base/icomoon';
 @import 'base/variables';
 @import 'base/functions';
 @import 'base/mixins';
@@ -35,6 +36,7 @@ $media-expressions: (
 @import 'custom/general';
 @import 'custom/buttons';
 @import 'custom/home-page';
+@import 'custom/about-us';
 @import 'custom/footer';
 
 

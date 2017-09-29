@@ -11,3 +11,80 @@
     padding: 0 20px;
   }
 }
+
+.visual-section{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  position: relative;
+  padding: 10.65% 0 6.95%;
+  border-bottom: 15px solid $red;
+  &:before{
+    @include pseudo;
+    top:0;
+    left:0;
+    @include size(100%);
+    background: rgba(0,0,0,.4);
+  }
+  @include media("<=tablet"){
+    padding: 80px 0 7%;
+  }
+  &.small{
+    padding: 7.05% 0 3.2%;
+    @include media("<=widescreen"){
+      padding: 100px 0 3.2%;
+    }
+  }
+  >*{
+    position: relative;
+    z-index: 3;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    color: $white;
+  }
+  .visual-text{
+    max-width: 665px;
+  }
+  .buttons-holder{
+    overflow: hidden;
+    margin: 0 -7px;
+    max-width: 582px;
+    >span{
+      float: left;
+      width: 50%;
+      padding: 0 7px;
+    }
+    .btn{
+      display: block;
+    }
+  }
+}
+.tel{
+  pointer-events: none;
+  @include media("<=tablet"){
+    pointer-events: auto;
+  }
+}
+.title-with-border{
+  text-align: center;
+  h2{
+    margin: 0 0 13px;
+  }
+  >*{
+    display: block;
+    border-bottom: 1px solid $gray2;
+    >span{
+      display: inline-block;
+      vertical-align: top;
+      border-bottom: 3px solid $red;
+      padding: 0 0 8px;
+      margin: 0 0 -1px;
+    }
+  }
+}

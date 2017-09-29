@@ -6,7 +6,7 @@
   left:0;
   width: 100%;
   height: 72px;
-  border-bottom: 1px solid $gray;
+  border-bottom: 1px solid rgba(214,218,222,.6);
   background: transparent;
   z-index: 99;
   @include media("<=desktop"){
@@ -199,7 +199,7 @@
         @include pseudo();
         @include size(100%, 3px);
         background: $red;
-        bottom: -5px;
+        bottom: -2px;
         left: 0;
         opacity:0;
         @include media("<=desktop"){
@@ -282,6 +282,9 @@
       font-weight: 700;
       color: $gray2;
       margin: 0 0 15px;
+      @include media("<=desktop"){
+        cursor: pointer;
+      }
     }
   }
   .hover{

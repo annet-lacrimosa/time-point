@@ -1,0 +1,100 @@
+// About-us page
+
+.visual-holder{
+  text-align: center;
+  font-weight: 400;
+  font-size:$base-font-size * 1.17;
+  h1{
+    font-weight: 700;
+    margin: 0 0 22px;
+  }
+  p{
+    margin: 0 0 10px;
+  }
+  .call{
+    font-weight: 300;
+    font-size: $base-font-size * 0.8; //16px
+    strong{
+      font-weight: 700;
+    }
+    .icon{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 0 0;
+      font-size: $base-font-size * 0.7;  //12px
+    }
+  }
+  a{
+    color: #fff;
+  }
+  .tel{
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+.about{
+  padding: 26px 0 0;
+  .content-block{
+    padding: 39px 0 50px;
+    .image-block{
+      margin: 0 0 0 -3px;
+    }
+  }
+  .text-block{
+    padding: 0 0 3px;
+  }
+  .tabset{
+    a{
+      padding: 67px 10px 33px;
+      @include media("<=desktop"){
+        padding: 40px 10px;
+      }
+      @include media("<=tablet"){
+        padding: 20px 5px;
+      }
+    }
+  }
+}
+.service-holder{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #fff;
+  @include media("<=tablet"){
+    flex-direction: column;
+  }
+  >div{
+    width: 50%;
+    @include media("<=tablet"){
+      width: 100%;
+      text-align: center;
+      order: 1;
+    }
+  }
+  .text-block{
+    padding: 52px 50px 20px;
+    line-height: 1.3;
+    @include media("<=tablet"){
+      order: 2;
+      padding: 30px 15px;
+    }
+    h2{
+      margin: 0 0 14px;
+    }
+    p{
+      margin: 0 0 49px;
+
+      @include media("<=tablet"){
+        margin: 0 0 20px;
+      }
+    }
+  }
+  .image-block{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include media("<=tablet"){
+      align-items: center;
+    }
+  }
+}
