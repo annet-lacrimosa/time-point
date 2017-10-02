@@ -376,7 +376,7 @@ th {
 .icon-customers:before {
   content: "\E003"; }
 
-.nav .drop-menu, .tabset, .stat-list, .customers-list, .solutions-list, .sub-nav, .footer-nav, .add-menu {
+.nav .drop-menu, .tabset, .stat-list, .customers-list, .solutions-list, .features-list, .sub-nav, .footer-nav, .add-menu {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -1035,7 +1035,8 @@ label {
       vertical-align: top;
       border-bottom: 3px solid #df3536;
       padding: 0 0 8px;
-      margin: 0 0 -1px; }
+      margin: 0 0 -1px;
+      text-transform: capitalize; }
 
 .tabset {
   display: table;
@@ -1634,6 +1635,77 @@ label {
       padding: 30px 0; } }
   .cloud .title-with-border {
     margin: 0 0 49px; }
+
+.features-list {
+  margin: 45px auto 17px;
+  max-width: 998px;
+  letter-spacing: -0.3em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14.11px;
+  color: #7c8087; }
+  .features-list li {
+    display: inline-block;
+    letter-spacing: 0;
+    vertical-align: top;
+    width: 50%;
+    padding: 0 15px 10px; }
+    @media (max-width: 768px) {
+      .features-list li {
+        display: block;
+        width: 100%;
+        padding: 0 0 10px; } }
+  .features-list .feature {
+    display: block;
+    background: #fff;
+    border: 1px solid #d6dade;
+    font-weight: 700;
+    padding: 11px 10px 13px; }
+
+.small-bottom-padding {
+  padding: 26px 0 10px; }
+  .small-bottom-padding .tabset a {
+    padding: 67px 10px 23px; }
+    @media (max-width: 992px) {
+      .small-bottom-padding .tabset a {
+        padding: 40px 10px; } }
+    @media (max-width: 768px) {
+      .small-bottom-padding .tabset a {
+        padding: 20px 5px; } }
+
+.features {
+  padding: 55px 0; }
+  @media (max-width: 768px) {
+    .features {
+      padding: 30px 0; } }
+
+.guarantee-block {
+  overflow: hidden;
+  border: 1px solid #d6dade;
+  padding: 43px 7% 36px 8%;
+  margin: 31px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .guarantee-block .image-block {
+    margin: 0 10% 0 0;
+    width: 150px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
+    @media (max-width: 768px) {
+      .guarantee-block .image-block {
+        width: 100px; } }
+    @media (max-width: 480px) {
+      .guarantee-block .image-block {
+        width: 65px; } }
+  .guarantee-block h2 {
+    margin: 0 0 10px; }
+  .guarantee-block p {
+    margin: 0 0 22px; }
 
 .footer {
   border-bottom: 15px solid #df3536;
