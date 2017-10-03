@@ -175,6 +175,9 @@
     justify-content: center;
     padding: 18px 28px;
     height: 144px;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
     img{
       max-height:100%;
     }
@@ -183,6 +186,49 @@
     }
     @include media("<=phone"){
       height: auto;
+    }
+    &.open-description{
+      overflow: visible;
+      .text-description{
+        opacity: 1;
+        z-index: 1;
+      }
+      .opener{
+        background: $red url(../images/sprite.png) no-repeat -20px -16px;
+      }
+    }
+    .opener{
+      @include size(18px);
+      position: absolute;
+      top:10px;
+      right:10px;
+      border-radius: 50%;
+      background: $gray2 url(../images/sprite.png) no-repeat 4px -14px;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .text-description{
+      position: absolute;
+      top:100%;
+      left:-1px;
+      right:-1px;
+      background: #fff;
+      opacity:0;
+      z-index: -1;
+      transition: all .3s ease-in-out;
+      border: solid $gray2;
+      border-width: 0 1px 1px;
+      padding: 6px 20px 24px;
+      font-size: $base-font-size * 0.8; //16px
+      line-height: 1.45;
+      text-align: center;
+      p{
+        margin: 0 0 23px;
+      }
+    }
+    .more{
+      font-size:$base-font-size;
     }
   }
 }
